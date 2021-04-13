@@ -1,9 +1,9 @@
 import axios, { AxiosError, AxiosInstance } from 'axios';
 
-import { RequestBaseConfig } from 'api/types/RequestBaseConfig';
-import { RequestConfig } from 'api/types/RequestConfig';
-import { Request } from 'api/types/Request';
-import { ErrorConfig } from 'api/types/ErrorConfig';
+import { RequestBaseConfig } from '../types/RequestBaseConfig';
+import { RequestConfig } from '../types/RequestConfig';
+import { Request } from '../types/Request';
+import { ErrorConfig } from '../types/ErrorConfig';
 import { IAgent } from './IAgent';
 
 

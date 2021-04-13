@@ -1,6 +1,6 @@
-import { RequestConfig } from 'api/types/RequestConfig';
-import { RequestBaseConfig } from 'api/types/RequestBaseConfig';
-import { Request } from 'api/types/Request';
+import { RequestConfig } from '../types/RequestConfig';
+import { RequestBaseConfig } from '../types/RequestBaseConfig';
+import { Request } from '../types/Request';
 
 
 export interface IAgent {
