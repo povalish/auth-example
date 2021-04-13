@@ -71,7 +71,9 @@ export class AuthorizationService {
    */
   public requestLogin(data: LoginRD): Promise<Request<Tokens>> {
     return login(data).then((response) => {
-      if (response.status === 'loaded') { this.setTokens(response.payload); }
+      if (response.status === 'loaded') {
+        runInAction(() => this.setTokens(response.payload));
+      }
       return response;
     });
   }
@@ -86,7 +88,9 @@ export class AuthorizationService {
     }
 
     return refreshTokens({ refresh: this.tokens.refresh }).then((response) => {
-      if (response.status === 'loaded') { this.setTokens(response.payload); }
+      if (response.status === 'loaded') {
+        runInAction(() => this.setTokens(response.payload));
+      }
       return response;
     });
   }
@@ -133,3 +137,7 @@ export class AuthorizationService {
 
 
 export const authorizationService = new AuthorizationService();
+function runInAction(arg0: () => void) {
+  throw new Error('Function not implemented.');
+}
+
